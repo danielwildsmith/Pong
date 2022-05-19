@@ -1,5 +1,5 @@
 import pygame
-from random import randint
+from random import choice
 from sys import exit
 
 
@@ -42,8 +42,8 @@ ball_speed_y = 5
 background_color = pygame.Color('grey15')
 rect_color = pygame.Color('lightgrey')
 
-if randint(0, 2):
-    ball_speed_x *= -1
+ball_speed_x *= choice([1, -1])
+ball_speed_y *= choice([1, -1])
 
 while True:
     for event in pygame.event.get():
